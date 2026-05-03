@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap');
+
+/* =========================
+   RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+
+/* =========================
+   VARIÁVEIS (CORES PADRÃO)
+========================= */
+:root {
+    --primary: #07506d;   /* seu azul principal */
+    --blue: #4a90e2;      /* azul secundário */
+    --dark: #1e2a38;      /* header */
+    --white: #ffffff;
+    --danger: #dc3545;
+    --success: #28a745;
+    --border: #e6e6e6;
+    --bg: #f4f6f9;
+}
+
+/* =========================
+   BODY
+========================= */
+body {
+    min-height: 100vh;
+    background-image: url(../hdtech/imagens/background_azul_eletronicos.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #333;
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: var(--dark);
+    z-index: 1000;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+/* container interno */
+.nav.container {
+    max-width: 1100px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* LOGO */
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--dark);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.logo span {
+    color: var(--blue);
+}
+
+/* lado direito */
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* usuário logado */
+.user-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.08);
+    padding: 6px 12px;
+    border-radius: 20px;
+    color: var(--dark);
+    font-size: 14px;
+}
+
+/* botão sair */
+.logout-btn {
+    background: var(--danger);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.logout-btn:hover {
+    opacity: 0.85;
+}
+
+/* ícone menu */
+#menu-icone {
+    color: var(--white);
+    font-size: 24px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#menu-icone:hover {
+    transform: scale(1.05);
+}
+
+/* =========================
+   CONTAINER PADRÃO
+========================= */
+.container {
+    max-width: 1100px;
+    margin: 100px auto 30px auto;
+    background: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+/* =========================
+   TÍTULO
+========================= */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--dark);
+    padding-top: 10px;
+}
+
+/* =========================
+   BOTÕES PADRÃO
+========================= */
+.btn {
+    display: inline-block;
+    padding: 10px 16px;
+    background: var(--blue);
+    color: var(--white);
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background: #357bd8;
+}
+
+/* =========================
+   FORMULÁRIO
+========================= */
+form {
+    max-width: 600px;
+    margin: 100px auto 30px auto;
+    background: var(--white);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* INPUTS */
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    outline: none;
+    font-size: 14px;
+}
+
+input:focus, textarea:focus {
+    border-color: var(--blue);
+    box-shadow: 0 0 5px rgba(74,144,226,0.25);
+}
+
+textarea {
+    resize: none;
+    height: 80px;
+}
+
+/* BOTÃO FORM */
+button {
+    background: var(--blue);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #357bd8;
+}
+
+/* =========================
+   IMAGEM PREVIEW
+========================= */
+.preview-img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+}
+
+/* =========================
+   TABELA
+========================= */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th {
+    background: var(--primary);
+    color: white;
+    padding: 14px;
+    text-align: left;
+    font-size: 14px;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+}
+
+tr:nth-child(even) {
+    background: #f9fbff;
+}
+
+tr:hover {
+    background: #eef4ff;
+}
+
+/* =========================
+   IMAGEM TABELA
+========================= */
+td img {
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+}
+
+/* =========================
+   AÇÕES
+========================= */
+td a {
+    padding: 6px 10px;
+    font-size: 12px;
+    border-radius: 5px;
+    color: white;
+    margin-right: 5px;
+}
+
+td a[href*="update"] {
+    background: var(--success);
+}
+
+td a[href*="delete"] {
+    background: var(--danger);
+}
+
+td a:hover {
+    opacity: 0.85;
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+@media (max-width: 768px) {
+    .container,
+    form {
+        margin: 90px 10px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    td, th {
+        padding: 8px;
+    }
+
+    td img {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+.inicio {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 8%;
+}
+
+/* overlay escuro pra melhorar leitura */
+.inicio-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+    z-index: 1;
+}
+
+.inicio img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+/* texto */
+.inicio-texto {
+    position: relative;
+    z-index: 2;
+    text-align: right;
+    max-width: 500px;
+    color: white;
+}
+
+.inicio-texto h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.inicio-texto h1 span {
+    color: var(--blue);
+}
+
+.inicio-texto p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+/* botão padronizado */
+.botao {
+    display: inline-block;
+    padding: 12px 18px;
+    background: var(--blue);
+    color: white;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.botao:hover {
+    background: #357bd8;
+}
